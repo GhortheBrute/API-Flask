@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Criação do Projeto de Desenvolvimento de API com Flask.">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/blog.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.py" afterDir="false" />
-    </list>
+    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Criação do Projeto de Desenvolvimento de API com Flask." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +34,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GhortheBrute/API-Flask",
+    "accountId": "49ffd1af-7f4f-4d28-89ae-8d866282cd6f"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -130,7 +127,7 @@
       <workItem from="1734132859018" duration="1269000" />
       <workItem from="1734134236168" duration="5760000" />
       <workItem from="1734144279363" duration="123000" />
-      <workItem from="1734209564174" duration="6224000" />
+      <workItem from="1734209564174" duration="6800000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto de Desenvolvimento de API com Flask.">
       <option name="closed" value="true" />
@@ -148,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734144399084</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Criação do Projeto de Desenvolvimento de API com Flask.">
+      <option name="closed" value="true" />
+      <created>1734217746090</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734217746090</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
