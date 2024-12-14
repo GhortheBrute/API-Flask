@@ -19,6 +19,10 @@ def _create_user():
 def _list_users():
     query = db.select(User)
     users = db.session.execute(query).scalars()
+
+    if not users:
+        return {"error": "No users"}
+
     return [
         {
             'id': user.id,
