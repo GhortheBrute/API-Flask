@@ -22,7 +22,7 @@ jwt = JWTManager()
 class Role(db.Model):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String, nullable=False)
-    user: Mapped[list['User']] = relationship(back_populates="parents")
+    user: Mapped[list['User']] = relationship(back_populates="role")
 
     def __repr__(self) -> str:
         return f'Role(id={self.id!r}, role={self.name!r})'
@@ -88,10 +88,11 @@ def create_app(test_config=None):
     jwt.init_app(app)
 
     # register Blueprint
-    from src.controllers import user, post, auth
+    from src.controllers import user, post, auth, role
 
     app.register_blueprint(user.app)
     app.register_blueprint(post.app)
     app.register_blueprint(auth.app)
+    app.register_blueprint(role.app)
 
     return app

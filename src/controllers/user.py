@@ -1,10 +1,11 @@
 from http import HTTPStatus
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request
 from flask_jwt_extended import jwt_required
 from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
 from src.app import User, db
+from src.utils import requires_role
 
 app = Blueprint('user', __name__, url_prefix='/users')
 
@@ -39,7 +40,11 @@ def _list_users():
     return [
         {
             'id': user.id,
-            'username': user.username
+            'username': user.username,
+            'role': {
+                'id': user.role.id,
+                'name': user.role.name,
+            },
         }
         for user in users
     ]
@@ -47,11 +52,12 @@ def _list_users():
 
 @app.route('/', methods=['GET', 'POST'])
 @jwt_required()
+@requires_role('admin')
 def handle_user():
     if request.method == 'POST':
         error = _create_user()
         if error:
-            return jsonify(error), error[1]
+            return {"error": error}, HTTPStatus.BAD_REQUEST
 
 
     else:
