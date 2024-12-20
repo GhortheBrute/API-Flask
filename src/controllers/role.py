@@ -1,5 +1,6 @@
 from http import HTTPStatus
-from flask import Blueprint, request, jsonify
+
+from flask import Blueprint, request
 
 from src.app import Role, db
 

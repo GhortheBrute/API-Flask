@@ -1,6 +1,6 @@
 from http import HTTPStatus
 from flask import Blueprint, request
-from flask_jwt_extended import jwt_required
+from flask_jwt_extended import jwt_required, get_jwt_identity
 from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
@@ -19,7 +19,6 @@ def _create_user():
         username=data['username'],
         password=data['password'],
         role_id=data['role_id'],
-
     )
     try:
         db.session.add(user)
@@ -34,8 +33,8 @@ def _list_users():
     query = db.select(User)
     users = db.session.execute(query).scalars()
 
-    if not users:
-        return {"error": "No users"}
+    # if not users:
+    #     return {"error": "No users"}
 
     return [
         {
@@ -52,14 +51,11 @@ def _list_users():
 
 @app.route('/', methods=['GET', 'POST'])
 @jwt_required()
-@requires_role('admin')
+@requires_role("admin")
 def handle_user():
     if request.method == 'POST':
-        error = _create_user()
-        if error:
-            return {"error": error}, HTTPStatus.BAD_REQUEST
-
-
+        response, status_code = _create_user()
+        return response, status_code
     else:
         return {'users': _list_users()}
 
@@ -70,7 +66,11 @@ def get_user(user_id):
     return [
         {
             'id': user.id,
-            'username': user.username
+            'username': user.username,
+            'role': {
+                'id': user.role.id,
+                'name': user.role.name,
+            }
         }
     ]
 
@@ -101,6 +101,6 @@ def update_user(user_id):
 @app.route('/<int:user_id>', methods=['DELETE'])
 def delete_user(user_id):
     user = db.get_or_404(User, user_id)
-    db.session.delete(user)
+    user.active = False
     db.session.commit()
     return "", HTTPStatus.NO_CONTENT
