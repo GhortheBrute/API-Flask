@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Erro no teste de integridade de test_list_user_success.">
+    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Módulo de tests finalizado.">
+      <change afterPath="$PROJECT_DIR$/src/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/integration/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/integration/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/integration/controllers/test_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/integration/controllers/test_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +242,7 @@
       <workItem from="1734387433317" duration="8933000" />
       <workItem from="1735852431769" duration="1101000" />
       <workItem from="1735853593147" duration="11242000" />
-      <workItem from="1735939018423" duration="2552000" />
+      <workItem from="1735939018423" duration="4350000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto de Desenvolvimento de API com Flask.">
       <option name="closed" value="true" />
@@ -313,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735866308700</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Módulo de tests finalizado.">
+      <option name="closed" value="true" />
+      <created>1735941974048</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735941974048</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +339,8 @@
     <MESSAGE value="Finalizado módulo de autenticação/autorização." />
     <MESSAGE value="Início módulo de testes." />
     <MESSAGE value="Erro no teste de integridade de test_list_user_success." />
-    <option name="LAST_COMMIT_MESSAGE" value="Erro no teste de integridade de test_list_user_success." />
+    <MESSAGE value="Módulo de tests finalizado." />
+    <option name="LAST_COMMIT_MESSAGE" value="Módulo de tests finalizado." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlaskProject$.coverage" NAME=" Coverage Results" MODIFIED="1735941321335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests/integration/controllers" />
