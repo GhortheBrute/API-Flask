@@ -1,11 +1,12 @@
+import logging
 from http import HTTPStatus
-from flask import Blueprint, request
+from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required
 from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
-from src.app import User, db
-from src.utils import requires_role
+from app import User, db
+from utils import requires_role
 
 app = Blueprint('user', __name__, url_prefix='/users')
 
@@ -31,23 +32,31 @@ def _create_user():
 
 
 def _list_users():
-    query = db.select(User)
-    users = db.session.execute(query).scalars()
+    try:
+        logging.debug("Executing user query...")  # Debug print
+        query = db.select(User)
+        users = db.session.execute(query).scalars()
+        logging.debug(f"Query executed. Users found: {users}")  # Debug print
 
-    if not users:
-        return {"error": "No users"}
+        if not users:
+            return {"error": "No users"}, HTTPStatus.NO_CONTENT
 
-    return [
-        {
-            'id': user.id,
-            'username': user.username,
-            'role': {
-                'id': user.role.id,
-                'name': user.role.name,
-            },
-        }
-        for user in users
-    ]
+        users_list = [
+            {
+                'id': user.id,
+                'username': user.username,
+                'role': {
+                    'id': user.role.id,
+                    'name': user.role.name,
+                },
+            }
+            for user in users
+        ]
+        logging.debug(f"Users list constructed: {users_list}")  # Debug print
+        return {'users': users_list}, HTTPStatus.OK
+    except Exception as e:
+        logging.debug(f'Error fetching users: {str(e)}')
+        return {'error': 'Failed to fetch users'}, HTTPStatus.INTERNAL_SERVER_ERROR
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -55,24 +64,25 @@ def _list_users():
 @requires_role('admin')
 def handle_user():
     if request.method == 'POST':
-        error = _create_user()
-        if error:
-            return {"error": error}, HTTPStatus.BAD_REQUEST
+        users_response, status_code = _create_user()
+        return users_response, status_code
 
 
     else:
-        return {'users': _list_users()}
+        users_response, status_code = _list_users()
+        logging.debug(f"Users response: {users_response}, Status code: {status_code}")  # Debug print
+        return users_response, status_code
 
 
 @app.route('/<int:user_id>')
 def get_user(user_id):
     user = db.get_or_404(User, user_id)
-    return [
+    return jsonify(
         {
             'id': user.id,
             'username': user.username
         }
-    ]
+    )
 
 
 @app.route('/<int:user_id>', methods=['PATCH'])

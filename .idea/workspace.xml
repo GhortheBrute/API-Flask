@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Finalizado módulo de autenticação/autorização.">
-      <change afterPath="$PROJECT_DIR$/src/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/test_utils.py" afterDir="false" />
+    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Início módulo de testes.">
+      <change afterPath="$PROJECT_DIR$/src/tests/integration/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/integration/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/integration/controllers/test_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/unit/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/unit/test_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/role.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/role.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_utils.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +77,13 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Flask server.Flask (app.py).executor": "Run",
+    "Python tests.Python tests for test_user.test_get_user_not_found.executor": "Run",
+    "Python tests.Python tests for test_user.test_get_user_success.executor": "Run",
+    "Python tests.Python tests for test_user.test_list_users_success.executor": "Run",
+    "Python tests.Python tests for test_utils.test_eleva_quadrado_sucesso.executor": "Run",
+    "Python tests.Python tests for test_utils.test_eleva_quadrado_typeerror.executor": "Run",
+    "Python tests.Python tests for test_utils.test_require_role_fail.executor": "Run",
+    "Python tests.Python tests for test_utils.test_require_role_success.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -81,7 +95,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.python.templateLanguages.PyTemplateLanguageModulesConfigurable",
+    "settings.editor.selected.configurable": "editor.preferences.folding",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -94,8 +108,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\wilde\OneDrive - Grupo Marista\Codes\Python\DIO\Python Basico\FlaskProject\src\instance" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wilde\OneDrive - Grupo Marista\Codes\Python\DIO\Python Basico\FlaskProject\src\tests\unit" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests for test_user.test_list_users_success">
     <configuration name="Flask (app.py)" type="Python.FlaskServer" nameIsGenerated="true">
       <option name="flaskDebug" value="true" />
       <module name="API-Flask" />
@@ -110,7 +127,7 @@
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.13 (FlaskProject)" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\wilde\OneDrive - Grupo Marista\Codes\Python\DIO\Python Basico\FlaskProject\src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -118,12 +135,101 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_user.test_get_user_not_found" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API-Flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests/integration/controllers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_user.test_get_user_not_found&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_user.test_get_user_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API-Flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests/integration/controllers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_user.test_get_user_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_user.test_list_users_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API-Flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests/integration/controllers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_user.test_list_users_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.unit.test_utils.test_require_role_fail" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API-Flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_utils.test_require_role_fail&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.unit.test_utils.test_require_role_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="API-Flask" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.unit.test_utils.test_require_role_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_user.test_list_users_success" />
+        <item itemvalue="Python tests.Python tests for test_user.test_get_user_success" />
+        <item itemvalue="Python tests.Python tests for test_user.test_get_user_not_found" />
+        <item itemvalue="Python tests.Python tests for tests.unit.test_utils.test_require_role_fail" />
+        <item itemvalue="Python tests.Python tests for tests.unit.test_utils.test_require_role_success" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
-        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -140,7 +246,9 @@
       <workItem from="1734134236168" duration="5760000" />
       <workItem from="1734144279363" duration="123000" />
       <workItem from="1734209564174" duration="11544000" />
-      <workItem from="1734387433317" duration="7483000" />
+      <workItem from="1734387433317" duration="8933000" />
+      <workItem from="1735852431769" duration="1101000" />
+      <workItem from="1735853593147" duration="10964000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto de Desenvolvimento de API com Flask.">
       <option name="closed" value="true" />
@@ -190,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734394156725</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Início módulo de testes.">
+      <option name="closed" value="true" />
+      <created>1734396813787</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734396813787</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,10 +327,12 @@
     <MESSAGE value="Criação do Projeto de Desenvolvimento de API com Flask." />
     <MESSAGE value="Criando autorização nos métodos." />
     <MESSAGE value="Finalizado módulo de autenticação/autorização." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalizado módulo de autenticação/autorização." />
+    <MESSAGE value="Início módulo de testes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Início módulo de testes." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/API_Flask$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1734387795259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\wilde\OneDrive - Grupo Marista\Codes\Python\DIO\Python Basico\FlaskProject\src" />
+    <SUITE FILE_PATH="coverage/API_Flask$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1735865951742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/API_Flask$.coverage" NAME=" Coverage Results" MODIFIED="1735865959910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests/integration/controllers" />
     <SUITE FILE_PATH="coverage/FlaskProject$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1734140326411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\wilde\OneDrive - Grupo Marista\Codes\Python\DIO\Python Basico\FlaskProject\src" />
   </component>
 </project>

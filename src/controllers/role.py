@@ -1,7 +1,7 @@
 from http import HTTPStatus
 from flask import Blueprint, request, jsonify
 
-from src.app import Role, db
+from app import Role, db
 
 app = Blueprint('role', __name__, url_prefix='/roles')
 

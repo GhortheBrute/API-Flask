@@ -3,8 +3,8 @@ from flask import Blueprint, request, jsonify
 from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
-from src.controllers.user import get_user
-from src.app import Post, db
+from controllers.user import get_user
+from app import Post, db
 
 app = Blueprint('post', __name__, url_prefix='/posts')
 
