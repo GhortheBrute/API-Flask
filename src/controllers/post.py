@@ -1,9 +1,8 @@
 from http import HTTPStatus
+
 from flask import Blueprint, request, jsonify
-from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
-from controllers.user import get_user
 from app import Post, db
 
 app = Blueprint('post', __name__, url_prefix='/posts')

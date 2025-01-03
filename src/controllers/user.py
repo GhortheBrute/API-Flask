@@ -1,5 +1,6 @@
 import logging
 from http import HTTPStatus
+
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required
 from sqlalchemy import inspect
