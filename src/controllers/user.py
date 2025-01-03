@@ -6,8 +6,8 @@ from flask_jwt_extended import jwt_required
 from sqlalchemy import inspect
 from sqlalchemy.exc import SQLAlchemyError
 
-from app import User, db
-from utils import requires_role
+from src.app import User, db
+from src.utils import requires_role
 
 app = Blueprint('user', __name__, url_prefix='/users')
 
