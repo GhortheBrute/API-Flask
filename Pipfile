@@ -12,7 +12,6 @@ flask-jwt-extended = "*"
 pytest = "*"
 pytest-mock = "*"
 gunicorn = "*"
-psycopg2-binary = "*"
 
 [dev-packages]
 
