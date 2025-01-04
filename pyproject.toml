@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dio-example"
+version = "0.1.0"
+description = "Projeto de aprendizado de como construir uma API em FLASK com Python"
+authors = ["GhortheBrute <143045110+GhortheBrute@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.1.0"
+flask-jwt-extended = "^4.7.1"
+flask-migrate = "^4.0.7"
+flask-sqlalchemy = "^3.1.1"
+flask-bcrypt = "^1.0.1"
+flask-marshmallow = "^1.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
