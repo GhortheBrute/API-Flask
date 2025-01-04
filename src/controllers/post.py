@@ -3,7 +3,7 @@ from http import HTTPStatus
 from flask import Blueprint, request, jsonify
 from sqlalchemy.exc import SQLAlchemyError
 
-from src.app import Post, db
+from src.models import Post, db
 
 app = Blueprint('post', __name__, url_prefix='/posts')
 
