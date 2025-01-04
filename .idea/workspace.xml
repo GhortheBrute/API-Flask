@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Incluido Shell">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b8dc687b-0c55-402f-b25c-70bc4721dea4" name="Changes" comment="Incluido Shell 2">
       <change beforePath="$PROJECT_DIR$/src/render-deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/render-deploy.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +250,7 @@
       <workItem from="1735853593147" duration="11242000" />
       <workItem from="1735939018423" duration="7296000" />
       <workItem from="1735947295171" duration="813000" />
-      <workItem from="1735948990071" duration="728000" />
+      <workItem from="1735948990071" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do Projeto de Desenvolvimento de API com Flask.">
       <option name="closed" value="true" />
@@ -389,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735949577586</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Incluido Shell 2">
+      <option name="closed" value="true" />
+      <created>1735949728252</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1735949728252</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +425,8 @@
     <MESSAGE value="Atualizado PIPFILE" />
     <MESSAGE value="Atualizacao para src.app" />
     <MESSAGE value="Incluido Shell" />
-    <option name="LAST_COMMIT_MESSAGE" value="Incluido Shell" />
+    <MESSAGE value="Incluido Shell 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Incluido Shell 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlaskProject$.coverage" NAME=" Coverage Results" MODIFIED="1735941321335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests/integration/controllers" />
